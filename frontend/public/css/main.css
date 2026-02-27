@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Variable.woff2') format('woff2-variations'), url('/fonts/Chillax-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+:root {
+  --base-dark: #001514;
+  --text-light: #fbfffe;
+  --accent-gold: #D4AF37;
+  --accent-soft: #003B36;
+  --action-red: #FF6B6B;
+  --glass-bg: rgba(251, 255, 254, 0.05);
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chillax', sans-serif;
+  background-image: linear-gradient(150deg, #001514, #FF6B6B, #fbfffe, #D4AF37);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.grid-container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: auto, 1fr, auto;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "header header header"
+    "nav-bar nav-bar nav-bar" 
+    "player-pool main chat-pool" 
+    "footer footer footer";
+    /* gap: 20px; */
+}
+header {
+    grid-area: header;
+    background-color: #fbfffe;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.avatar-container img {
+    border-radius: 50%;
+    background-color: #FF6B6B;
+    padding: 5px;
+}
+.user-container {
+    display: flex;
+}
+.navigation {
+    grid-area: nav-bar;
+    background-color: #001514;
+    width: 100%;
+    padding: 10px;
+}
+.desktop-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.desktop-menu a {
+    text-decoration: none;
+    color:#fbfffe;
+}
+p {
+    color: rgb(0, 21, 20, 0.85);
+    font-weight: 300px;
+    line-height: 1.6;
+    letter-spacing: 0.01rem;
+}
+.player-pool {
+    grid-area: player-pool;
+    width: 100%;
+    max-width: 100px;
+    background-color: #0015145b;
+}
+
+main {
+    grid-area: main;
+    width: 100%;
+    max-width: 900px;
+    background-color: #fbfffe;
+    height: 100%;
+    box-shadow: 2px 0 2px #0015146e;
+    z-index: 1;
+}
+
+/* Social chat section */
+.chat-pool {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+background-color: #0015144c;
+backdrop-filter: blur(20px);
+
+}
+.user-input {
+    grid-area: user-input;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* footer */
+footer {
+    grid-area: footer;
+    padding: 10px 0;
+    background-color: #001514;
+    text-align: center;
+}
+.copyright {
+  font-family: 'Chillax', sans-serif;
+  font-weight: 300; /* Use that light variable weight */
+  font-size: 0.85rem;
+  color: rgba(251, 255, 254, 0.5); /* Faded white looks more professional */
+  letter-spacing: 0.05em;
+  text-transform: uppercase; /* Optional: gives it a "designer" feel */
+}
