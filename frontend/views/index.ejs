@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Femabras | O seu sucesso e o nosso foco</title>
+    <link rel="shortcut icon" href="/image/logos/femabras-logo-dark.svg" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="grid-container">
+        <section class="banner">
+            <div>
+                <p class="secret-number">
+                    <% number.forEach(element => { %>
+                        <span class="code-block"><%=element%></span>
+                    <% }) %>
+                </p>
+            </div>
+            <div class="user-attempts-count">
+                <p>Tentativas: <%= attempts %></p>
+            </div>
+        </section>
         <header>
             <div class="logo-conatiner">
-                <img src="/image/logos/femabras-logo-dark.svg" alt="femabras logo">
-            </div>
-            <div>
-                <h2>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</h2>
-            </div>
-            <div class="user-container">
-                <div class="avatar-container">
-                    <img src="/image/icons/avatar-dark.svg" alt="user avatar photo" width="42px">
-                </div>
-                <div class="user-info-container">
-                    <h3>Usuario</h3>
-                    <p>_ _ _ _ _ _</p>
-                </div>
+                <img src="/image/logos/femabras-logo-light.svg" alt="femabras logo" width="32px">
             </div>
         </header>
         <nav class="navigation">
@@ -36,6 +37,7 @@
                 <li><a href="/sobre-nos">Sobre Nós</a></li>
                 <li><a href="/contacto">Contacto</a></li>
             </ul>
+            <button>Menu</button>
         </nav>
         <section class="player-pool"><h2>Online</h2></section>
         <main>

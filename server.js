@@ -15,7 +15,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res.render("index");
+    const numberList = [];
+    const attemptNumber = 6;
+    
+    for (let i = 0; i < 12; i++) {
+        const randomNumber = Math.floor( Math.random() * 10);
+        numberList.push(randomNumber);
+    }
+
+    res.render("index", { number: numberList, attempts: attemptNumber });
 });
 
 app.listen(PORT, ()=>{
