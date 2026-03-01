@@ -11,7 +11,7 @@
     "dev": "node --watch server.js"
   },
   "engines": {
-  "node": ">=18"
+    "node": ">=18"
   },
   "dependencies": {
     "ejs": "^4.0.1",

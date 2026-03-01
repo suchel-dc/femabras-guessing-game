@@ -9,53 +9,51 @@
 </head>
 <body>
     <div class="grid-container">
-        <section class="banner">
-            <div>
-                <p class="secret-number">
-                    <% number.forEach(element => { %>
-                        <span class="code-block"><%=element%></span>
-                    <% }) %>
-                </p>
-            </div>
-            <div class="user-attempts-count">
-                <p>Tentativas: <%= attempts %></p>
-            </div>
-        </section>
-        <header>
+        
+        <header class="main-header">
+            <section class="banner">
+                <div>
+                    <p class="secret-number">
+                        <% number.forEach(element => { %>
+                            <span class="code-block"><%=element%></span>
+                        <% }) %>
+                    </p>
+                </div>
+                <div class="user-attempts-count">
+                    <p>Tentativas: <%= attempts %></p>
+                </div>
+            </section>
             <div class="logo-conatiner">
                 <img src="/image/logos/femabras-logo-light.svg" alt="femabras logo" width="32px">
             </div>
+            <nav class="nav-bar">
+                <div class="menu-container hidde">
+                    <button class="close-button">X</button>
+                    <ul class="desktop-menu">
+                        <li><a href="#gi" class="nav-links">Contacto</a></li>
+                        <li><a href="#gi" class="nav-links">Início</a></li>
+                        <li><a href="#gi" class="nav-links">Quebra Cabeça</a></li>
+                        <li><a href="#gi" class="nav-links">Desafios</a></li>
+                        <li><a href="#gi" class="nav-links">Nossos Serviços</a></li>
+                        <li><a href="#gi" class="nav-links">Patrocínio</a></li>
+                        <li><a href="#gi" class="nav-links">Vencedores</a></li>
+                        <li><a href="#gi" class="nav-links">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                <button class="mobile-menu">Menu</button>
+            </nav>
         </header>
-        <nav class="navigation">
-            <ul class="desktop-menu">
-                <li><a href="inicio">Início</a></li>
-                <li><a href="/quebra-cabeca">Quebra Cabeça</a></li>
-                <li><a href="/desafio">Desafios</a></li>
-                <li><a href="/nossos-sercicos">Nossos Serviços</a></li>
-                <li><a href="/patrocinio">Patrocínio</a></li>
-                <li><a href="/vencedores">Vencedores</a></li>
-                <li><a href="/sobre-nos">Sobre Nós</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-            </ul>
-            <button>Menu</button>
-        </nav>
+        
         <section class="player-pool"><h2>Online</h2></section>
-        <main>
-            <h2>A Sinfonia dos Números e o Ritmo da Máquina</h2>
-            <p>Na arquitetura de um software, assim como na construção de um beat de Amapiano, a precisão é a alma do negócio. Imagine que cada linha de código é um compasso. Para um produtor que busca a perfeição, o segredo não está apenas no que se ouve, mas na estrutura invisível que sustenta a obra.
-
-Se olharmos para o horizonte de vinte anos, veremos que a tecnologia e a arte se fundiram. Para encontrar a frequência certa, o mestre deve observar os detalhes. O primeiro passo é notar a dupla batida do bumbo, seguida por duas variações de sintetizador que ecoam no vazio. Não há espaço para o zero, pois a energia deve ser plena, como uma nota três vezes sustentada em um solo de guitarra.
-
-A jornada do sucesso financeiro exige que você seja oito vezes mais resiliente que a média. Se você somar cinco camadas de percussão e subtrair as distrações, restará a essência: dois canais de áudio, sete notas na escala e três segundos de silêncio antes do drop.
-
-A fundação é sólida como um MacBook Pro de seis gerações atrás, mas com o poder de quatro núcleos processando o futuro. No fim, a matemática não mente: seis horas de trabalho, três de inspiração e três de pura execução. A música é o código; o código é a riqueza. Se você decifrar a ordem desta melodia, os sete pilares da sua fortuna estarão visíveis, e o último seis selará o seu destino.</p>
-
+        <main class="main-section">
+            <h2><%= title %></h2>
+            <p><%= content %></p>
         </main>
         <section class="chat-pool">
-            <div>social interaction</div>
-            <input type="text" class="user-input">
+            <div class="chat-response">social interaction</div>
+            <input type="text" class="chat-request">
         </section>
-        <footer>
+        <footer class="main-footer">
             <p class="copyright">&copy;<span id="current-year"></span> femabras. All rights reserved   </p></footer>
         <script src="/js/script.js"></script>
     </div>
